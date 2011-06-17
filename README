@@ -1,3 +1,9 @@
+Having fun with GPU acceleration in python.
+
+Benchmarks between the classic way of doing it and GPU can be found in each part.
+
+The project has/will have 3 parts
+
 [PART-1]
 	Contains a code that sums 2 vectors using GPU
 [/PART-1]
