@@ -1,0 +1,7 @@
+[PART-1]
+	Contains a code that sums 2 vectors using GPU
+[/PART-1]
+
+
+-------------------------------------------------------------------------
+For how to install and run pyOpenCL please read Install Notes

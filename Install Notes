@@ -1,0 +1,27 @@
+[!!] WARNING
+Tested under Ubuntu 11.04 with ATI 5470 graphic card
+I cant garanti that it will work under other 
+[!!] END_OF_WARNING
+--------------------------------------------
+Install ATI drivers
+
+Install dependencies
+$ apt-get install freeglut3-dev python-numpy
+
+
+Install the OpenCL libraries from
+http://forums.amd.com/forum/messageview.cfm?catid=390&threadid=125792&STARTPAGE=1&FTVAR_FORUMVIEWTMP=Linear
+(packages amd-app-2.4 and amd-app-dev)
+ 
+Do a dryrun of OpenCL
+$ cat "#include <CL/opencl.h>" > testcl.c
+$ gcc testcl.c -o prog -lOpenCL
+
+Download pyopencl from
+http://pypi.python.org/pypi/pyopencl
+
+Install the pyOpenCL libraries:
+$ python setup.py build
+$ python setup.py install 
+
+Do a dryrun of pyOpenCL by import pyopencl
