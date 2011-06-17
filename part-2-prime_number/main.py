@@ -7,7 +7,7 @@ from primenumber import PrimeCPU
 from primenumber import PrimeGPU
 from timeit import Timer
 
-N_LIMIT=10
+N_LIMIT=1000000
 
 def doCPU():
     cpu=PrimeCPU(N_LIMIT)
@@ -16,14 +16,17 @@ def doCPU():
 def doGPU():
     gpu=PrimeGPU(N_LIMIT)
     gpu.compute()
-    gpu.display()
+    #gpu.display()
 
 if __name__ == "__main__":
     
-    '''
+
     #----------------CPU--------------------------------------
     t = Timer("doCPU()","from __main__ import doCPU")
     print "Execution time of test without OpenCL: " + str(t.timeit(number=1)) + " seconds"
-    '''
-    doGPU()
+
+    
+    #----------------GPU--------------------------------------
+    t2 = Timer("doGPU()","from __main__ import doGPU")
+    print "Execution time of test with OpenCL: " + str(t2.timeit(number=1)) + " seconds"
     

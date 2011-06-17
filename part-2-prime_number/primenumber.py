@@ -67,27 +67,24 @@ class PrimeGPU():
         #create the program
         self.program = cl.Program(self.ctx, fstr).build()
         
-        
-        #popCorn
         mf = cl.mem_flags
 
         #initialize client side (CPU) arrays
-        self.primes = numpy.array(range(self.limit), dtype=numpy.float32)
+        self.primes = numpy.zeros( shape=(self.limit),dtype=numpy.int32 )
 
         #create OpenCL buffers
-        self.dest_buf = cl.Buffer(self.ctx, mf.WRITE_ONLY, self.primes.nbytes)
-        
+        self.dest_buf = cl.Buffer(self.ctx, mf.WRITE_ONLY, self.limit*4)
         
         #execute
         self.program.part1(self.queue, self.primes.shape, None, self.dest_buf)
 
         #get the result
         cl.enqueue_read_buffer(self.queue, self.dest_buf, self.primes).wait()
-        
 
             
     def display(self):
         
-
-        for thisPrime in self.primes:
-            print str(thisPrime)
+        
+        for index in range(3,self.limit):
+            if self.primes[index]:
+                print str(index)

@@ -10,7 +10,7 @@ The project has/will have 3 parts
 
 
 [PART-2]
-	Generate first N prime numbers. It uses the basic brute-force algorithm.
+	Finds the prime numbers until N.
 	I know there are better algorithms, but the porpuse is to test the GPU. 
 [/PART-2]
 

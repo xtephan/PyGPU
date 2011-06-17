@@ -1,0 +1,15 @@
+For checking prime numbers until
+
+N=100
+Execution time of test without OpenCL: 0.000123023986816 seconds
+Execution time of test with OpenCL: 0.601119995117 seconds
+
+N=1000
+Execution time of test without OpenCL: 0.00573706626892 seconds
+Execution time of test with OpenCL: 0.579922914505 seconds
+
+N=10000
+Execution time of test without OpenCL: 42.7467110157 seconds
+Execution time of test with OpenCL: 5.0943210125 seconds
+
+N=100000
