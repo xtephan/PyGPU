@@ -1,0 +1,2 @@
+Execution time of test without OpenCL: 11.731222868 seconds
+Execution time of test with OpenCL: 0.521452188492 seconds
