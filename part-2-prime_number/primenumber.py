@@ -4,7 +4,7 @@ Created on Jun 17, 2011
 @author: xtephan
 '''
 
-class Prime():
+class PrimeCPU():
     '''
     Generates the first N prime numbers
     '''
