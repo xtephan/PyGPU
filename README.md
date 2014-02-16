@@ -1,3 +1,6 @@
+PyGPU
+====
+
 Having fun with GPU acceleration in python.
 
 Benchmarks between the classic way of doing it and GPU can be found in each part.
